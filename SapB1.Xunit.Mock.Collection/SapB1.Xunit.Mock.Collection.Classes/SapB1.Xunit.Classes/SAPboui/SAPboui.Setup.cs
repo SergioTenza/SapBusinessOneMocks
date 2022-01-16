@@ -18,29 +18,6 @@ namespace SapB1.Xunit.Classes.SAPboui
             formMock = new Mock<SAPbouiCOM.Form>();
             
         }
-        [Fact]
-        public async Task ShouldFillFormWithRandomData()
-        {
-
-            /*
-            * What:
-            * Where:
-            * When:
-            */
-
-            //Given
-            var formFiller = new Filler<SAPbouiCOM.Form>();
-            var formMock = new Mock<SAPbouiCOM.Form>();
-            var formClone = formMock.DeepClone();
-
-            //When
-            formFiller.Fill((SAPbouiCOM.Form)formMock.Object);
-            
-            //Then
-            Assert.Equal<Mock<SAPbouiCOM.Form>>(formMock, formClone);
-
-
-        }
     }
 
 }
